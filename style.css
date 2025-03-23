@@ -10,6 +10,9 @@ html, body{
     height: 100%;
     width: 100%;
 }
+body{
+    overflow-x: hidden;
+}
 #crsr{
     height: 2vw;
     width: 2vw;
@@ -17,7 +20,7 @@ html, body{
     /* background-color: #fff; */
     border: 1px solid #a3a1a1be;
     position: fixed;
-    z-index: 9999;
+    z-index: 999;
     mix-blend-mode: difference;
     transform: translate(-50%,-50%);
 }
@@ -62,6 +65,7 @@ html, body{
     text-transform: uppercase;
     font-weight: 700;
     opacity: 0;
+    /* animation-name: anime; */
     animation-duration: 1.5s;
     animation-iteration-count: infinite;
 }
@@ -103,14 +107,15 @@ html, body{
 
 
 
+
 #main{
     position: relative;
-    background-color: #030303;
+    background-color: #151515;
 }
 #page1{
     height: 100vh;
     width: 100%;
-    background-color: #151515;
+    /* background-color: #151515; */
 }
 #page1 #nav{
    display: flex;
@@ -131,12 +136,286 @@ html, body{
 .hero{
   width: 72%;
   margin-left: 27%;
+  height: fit-content;
+  overflow-y: hidden;
+  display: flex;
+  align-items: center;
+  
+  /* overflow-x: auto; */
 }
+
 .hero:nth-child(2){
     margin-top: 18vh;
 }
 .hero h1{
     font-size: 7.1vw;
     text-transform: uppercase;
+    font-weight: 600;
     line-height: 7.1vw;
+    position: relative;
 }
+#hero1::before{
+    content: "01";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+    left: 20%;
+    top: 30.5%;
+}
+.hero h2{
+    font-size: 7.1vw;
+    text-transform: uppercase;
+    line-height: 7.1vw;
+    border-bottom: 0.5vw solid #fff ;
+    padding-bottom: 0.8vw ;
+    transition: all ease 0.2;
+}
+.hero h2:hover{
+    -webkit-text-stroke: 2px  #fff;
+    color: transparent;
+    font-weight:500 ;
+    border-bottom: 0.5vw solid #ffffff00 ;
+}
+#page2{
+    height: 100vh;
+    width: 100%;
+    padding-top: 17vh;
+    position: relative;
+}
+
+#video-container{
+    height: 66vh;
+    width: 71vw;
+    position: relative;
+    left: 28%;
+    background-image: url(https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg);
+}
+#video-container img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    top: 0;
+}
+#video-container video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+#video-cursor{
+    background-color: #FFA63D;
+    height: 8.5vw;
+    width: 8.5vw;
+    border-radius: 50%;
+    position: absolute;
+    top: -10%;
+    left: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 999;
+}
+#video-cursor i{
+    font-size: 2vw;
+}
+#page3{
+    min-height: 100vh;
+    width: 1005;
+    background-color: rgb(56, 56, 56);
+    position: relative;
+}
+#page4{
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    /* background-color: rgb(56, 56, 56); */
+    padding: 7vh 0;
+}
+#page4-content{
+    width: 72vw;
+    margin-left: 28%;
+    position: relative;
+    /* background-color: rgb(56, 56, 56); */
+}
+#page4-content h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+
+}
+#page4-content h1::before{
+    content: "03";
+    position: absolute;
+    font-size: 3vw;
+    font-weight: 100;
+    font-family: 'silk serif';
+    left: -12%;
+    top: 8%;
+ }
+#page4-content .underline{
+   height: 1.5px;
+   width: 100%;
+   background-color: #fff;
+   margin: 5vw 0;
+ 
+}
+#page4-content p{
+    /* padding-top: 9%; */
+    font-size: 2.05vw;
+    width: 50%;
+    margin-bottom: 3vw;
+}
+#page4-flex{
+    display: flex;
+}
+#page4-flex img{
+    width: 48%;
+}
+#page4-flex p{
+    font-size: 0.9vw;
+    width: 19%;
+    margin-left: 1vw;
+}
+#page4-blue-div{
+    background-color: #3F7DF4;
+    width: 33vw;
+    padding: 3vw;
+    position: relative;
+    margin-top: -38vh;
+    margin-left: 25vw ;
+}
+.blue-div-elem{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 1.7vw 0;
+    /* background-color: red; */
+    border-bottom: 2px solid #ffffff94;
+}
+.blue-div-elem h4{
+   font-size: 1.5vw ;
+   font-weight: 500;
+}
+.blue-div-elem h5{
+    width: 40%;
+    font-size: 0.9vw;
+    font-weight: 400;
+}
+#page5{
+    min-height: 100vh;
+    width: 100%;
+    position: relative; 
+}
+.elem{
+ white-space: nowrap;
+ overflow-x: hidden;
+ margin-bottom: -2.5vw;
+}
+.elem h1{
+    font-size: 7vw;
+   -webkit-text-stroke: 1px  #fff;
+   color: transparent; 
+   font-weight: 400;
+   text-transform: uppercase;
+   display: inline-block;
+   margin-right: 16px;
+   animation-name: Newanime;
+   animation-duration: 12s;
+   animation-iteration-count: infinite;
+   animation-timing-function: linear;
+
+}
+@keyframes Newanime {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(calc(-100% - 20px));
+    }
+}
+.elem2{
+    white-space: nowrap;
+    overflow-x: hidden;
+    margin-bottom: -2vw;
+   }
+   .elem2 h1{
+       font-size: 7vw;
+      -webkit-text-stroke: 1px  #fff;
+      color: transparent; 
+      font-weight: 400;
+      text-transform: uppercase;
+      display: inline-block;
+     transform: translateX(calc(-100% - 20px));
+     animation-name: Newanime;
+     animation-duration: 12s;
+     animation-iteration-count: infinite;
+     animation-timing-function: linear;
+     animation-direction: reverse;
+   
+   }
+   .elem span{
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+   }
+   .elem2 span{
+    font-style: italic;
+    font-family: 'silk serif';
+    color: transparent;
+   }
+
+#footer{
+    height: 85vh;
+    width: 100%;
+    position: relative;
+    padding-left: 28vw ;
+    padding-right: 2vw;
+
+ }
+#footer h1{
+    font-size: 7vw;
+    text-transform: uppercase;
+    position: relative;
+} 
+#footer h1::before{
+   content: "04";
+   position: absolute;
+   font-size: 3vw;
+   font-weight: 100;
+   font-family: 'silk serif';
+   left: -12%;
+   top: 8%;
+}
+.underline{
+    height: 1px;
+    width: 100%;
+    background-color: #fff;
+    margin: 3vw 0;
+
+}
+#footer-div{
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 15vw;
+    padding-top: 4vw;
+    margin-bottom: 6vw;
+}
+#footer-div h6{
+   font-size: 0.9vw;
+   margin-bottom: 1.7vw;
+   font-weight: 500;
+}
+.box{
+    width: 15%;
+}
+#footer-div h5{
+    font-size: 1.3vw;
+    /* margin: 0.2vh 0; */
+    font-weight: 500;
+ }
+ #footer>h5{
+    font-weight: 500;
+    font-size: 1vw;
+ }
